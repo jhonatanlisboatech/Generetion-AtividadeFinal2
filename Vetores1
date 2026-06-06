@@ -1,0 +1,32 @@
+programa
+{
+	
+	funcao inicio()
+	{
+		inteiro vetor[10] = {2, 5, 1, 3, 4, 9, 7, 8, 10, 6}
+		inteiro i, j, copia
+
+		// 1. Organização dos elementos em ordem decrescente (Bubble Sort)
+		para (i = 0; i < 10; i++)
+		{
+			para (j = i + 1; j < 10; j++)
+			{
+				// Laço condicional para verificar a ordem decrescente
+				se (vetor[i] < vetor[j])
+				{
+					copia = vetor[i]
+					vetor[i] = vetor[j]
+					vetor[j] = copia
+				}
+	}
+		}
+
+		// 2. Saída de dados do vetor já ordenado
+		escreva("vetor\n")
+		para (i = 0; i < 10; i++)
+		{
+			escreva(vetor[i], "\n")
+		}
+	}
+}
+
