@@ -1,0 +1,57 @@
+programa
+{
+	inclua biblioteca Matematica --> mat
+	
+	funcao inicio()
+	{
+		// Declaração de variáveis
+		inteiro vetor[10]
+		inteiro i
+		inteiro soma = 0
+		real media
+
+		// Entrada de dados: lê os 10 números inteiros
+		para (i = 0; i < 10; i++)
+		{
+			escreva("Digite o ", i + 1, "º número: ")
+			leia(vetor[i])
+			
+			// Acumula o valor para a soma total
+			soma = soma + vetor[i]
+		}
+
+		limpa() // Limpa a tela para organizar a saída
+
+		// 1. Exibe os elementos nos índices ímpares
+		escreva("\nElementos nos índices ímpares:\n")
+		para (i = 0; i < 10; i++)
+		{
+			// Verifica se o ÍNDICE é ímpar
+			se (i % 2 != 0)
+			{
+				escreva(vetor[i], " ")
+			}
+		}
+
+		// 2. Exibe os elementos do vetor que são números pares
+		escreva("\n\nElementos pares:\n")
+		para (i = 0; i < 10; i++)
+		{
+			// Verifica se o CONTEÚDO do vetor é par
+			se (vetor[i] % 2 == 0)
+			{
+				escreva(vetor[i], " ")
+				}
+		}
+
+		// 3. Exibe a soma de todos os elementos
+		escreva("\n\nSoma:\n", soma)
+
+		// 4. Calcula e exibe a média arredondada
+		// Nota: O Portugol Studio mantém o arredondamento padrão de divisão inteira 
+		// caso as duas variáveis sejam inteiras.
+		media = soma / 10
+		
+		escreva("\n\nMédia:\n", media, "\n")
+	}
+}
